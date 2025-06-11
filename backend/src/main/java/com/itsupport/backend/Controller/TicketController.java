@@ -1,6 +1,6 @@
 package com.itsupport.backend.Controller;
 
-import TicketService.TicketService;
+import com.itsupport.backend.Service.TicketService;
 import com.itsupport.backend.dtos.TicketDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -17,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Equipment {
-    
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long eq_id;
     private String name;
