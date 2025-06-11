@@ -1,11 +1,14 @@
-package com.itsupport.backend.tickmodel;
+package TicketService;
 
-import com.itsupport.backend.tickdto.TicketDto;
-import com.itsupport.backend.ticketrepository.TicketRepository;
-import com.itsupport.backend.tickmapper.Tickmapper;
+import com.itsupport.backend.dtos.TicketDto;
+import com.itsupport.backend.repository.TicketRepository;
+import com.itsupport.backend.mappers.Tickmapper;
+import com.itsupport.backend.model.Ticket;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TicketService {
 
 private final TicketRepository ticketRepository;
@@ -31,5 +34,21 @@ private final Tickmapper tickmapper;
         return ticketRepository.findById(id)
                 .map(tickmapper::toDTO)
                 .orElse(null);
+    }
+
+    public TicketDto EditTicket(Long id, TicketDto ticketDto) {
+        return ticketRepository.findById(id)
+                .map(existingTicket -> {
+
+                    existingTicket.setNom(ticketDto.getNom());
+                    existingTicket.setDescription(ticketDto.getDescription());
+
+                    Ticket updatedTicket = ticketRepository.save(existingTicket);
+                    return tickmapper.toDTO(updatedTicket);
+                })
+                .orElse(null);
+    }
+    public void deleteticket(Long id) {
+        ticketRepository.deleteById(id);
     }
 }

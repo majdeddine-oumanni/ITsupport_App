@@ -1,4 +1,4 @@
-package com.itsupport.backend.tickdto;
+package com.itsupport.backend.dtos;
 
 
 import lombok.AllArgsConstructor;

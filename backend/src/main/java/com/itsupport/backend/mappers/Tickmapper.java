@@ -1,8 +1,8 @@
-package com.itsupport.backend.tickmapper;
+package com.itsupport.backend.mappers;
 
 
-import com.itsupport.backend.tickdto.TicketDto;
-import com.itsupport.backend.tickmodel.Ticket;
+import com.itsupport.backend.dtos.TicketDto;
+import com.itsupport.backend.model.Ticket;
 import org.mapstruct.Mapper;
 
 import java.util.List;

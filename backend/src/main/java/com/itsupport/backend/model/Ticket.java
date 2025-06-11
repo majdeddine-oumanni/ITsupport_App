@@ -1,4 +1,4 @@
-package com.itsupport.backend.tickmodel;
+package com.itsupport.backend.model;
 
 
 import jakarta.persistence.Entity;

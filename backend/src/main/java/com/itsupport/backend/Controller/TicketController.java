@@ -1,7 +1,7 @@
-package com.itsupport.backend.TickController;
+package com.itsupport.backend.Controller;
 
 import TicketService.TicketService;
-import com.itsupport.backend.tickdto.TicketDto;
+import com.itsupport.backend.dtos.TicketDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
