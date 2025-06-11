@@ -1,4 +1,4 @@
-package TicketService;
+package com.itsupport.backend.Service;
 
 import com.itsupport.backend.dtos.TicketDto;
 import com.itsupport.backend.repository.TicketRepository;
