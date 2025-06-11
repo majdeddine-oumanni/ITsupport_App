@@ -1,9 +1,9 @@
 package com.itsupport.backend.Service;
 
-import com.itsupport.backend.Dto.PanneDto;
+import com.itsupport.backend.dtos.PanneDto;
 import com.itsupport.backend.Mapper.PanneMap;
-import com.itsupport.backend.entities.Panne;
-import com.itsupport.backend.repositorie.PanneRepositorie;
+import com.itsupport.backend.model.Panne;
+import com.itsupport.backend.repository.PanneRepositorie;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

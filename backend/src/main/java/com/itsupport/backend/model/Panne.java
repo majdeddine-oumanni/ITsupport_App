@@ -1,16 +1,24 @@
-package com.itsupport.backend.Dto;
+package com.itsupport.backend.model;
 
-public class PanneDto {
+import jakarta.persistence.*;
+
+@Entity
+public class Panne {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(nullable = false)
     private Long id;
     private Long idEquip;
 
-    public PanneDto(Long id, Long idEquip) {
+    public Panne(Long id, Long idEquip) {
         this.id = id;
         this.idEquip = idEquip;
     }
 
-    public PanneDto() {
+    public Panne() {
+
     }
+
 
     public Long getId() {
         return id;

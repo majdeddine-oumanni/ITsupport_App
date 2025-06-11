@@ -1,6 +1,6 @@
 package com.itsupport.backend.Controller;
 
-import com.itsupport.backend.Dto.PanneDto;
+import com.itsupport.backend.dtos.PanneDto;
 import com.itsupport.backend.Service.PanneService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

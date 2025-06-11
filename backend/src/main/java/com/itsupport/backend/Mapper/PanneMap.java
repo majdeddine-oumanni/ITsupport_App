@@ -1,7 +1,7 @@
 package com.itsupport.backend.Mapper;
 
-import com.itsupport.backend.Dto.PanneDto;
-import com.itsupport.backend.entities.Panne;
+import com.itsupport.backend.dtos.PanneDto;
+import com.itsupport.backend.model.Panne;
 import org.mapstruct.Mapper;
 
 import java.util.List;
