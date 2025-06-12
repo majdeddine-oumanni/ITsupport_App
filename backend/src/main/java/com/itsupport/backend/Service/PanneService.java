@@ -3,6 +3,7 @@ package com.itsupport.backend.Service;
 import com.itsupport.backend.dtos.PanneDto;
 import com.itsupport.backend.Mapper.PanneMap;
 import com.itsupport.backend.model.Panne;
+import com.itsupport.backend.model.Ticket;
 import com.itsupport.backend.repository.PanneRepositorie;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,18 @@ public class PanneService {
     public PanneDto getPanById(Long id){
         return panneRepositorie.findById(id)
                 .map(panneMap ::toDto)
+                .orElse(null);
+    }
+
+    public PanneDto update(Long id, PanneDto panneDto){
+        return panneRepositorie.findById(id)
+                .map(existingPanne -> {
+
+                    existingPanne .setIdEquip(panneDto.getIdEquip());
+
+                    Panne updatedPanne = panneRepositorie.save(existingPanne);
+                    return panneMap.toDto(updatedPanne);
+                })
                 .orElse(null);
     }
 
