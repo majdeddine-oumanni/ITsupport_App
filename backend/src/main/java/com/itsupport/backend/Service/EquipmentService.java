@@ -30,7 +30,7 @@ public class EquipmentService {
         return mapper.toDTOs(equipments);
     }
 
-    
+
     public EquipmentDto updateEquipment(EquipmentDto dto, Long id) {
         Equipment foundEquipment = repository.findById(id).
                 orElseThrow(()-> new EntityNotFoundException("equipment not found"));

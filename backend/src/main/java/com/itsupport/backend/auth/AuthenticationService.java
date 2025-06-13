@@ -38,7 +38,8 @@ public class AuthenticationService {
             default -> throw new IllegalArgumentException("Invalid role: " + request.getRole());
         }
 
-        user.setName(request.getEmail()); // or request.getUsername()
+        user.setName(request.getName()); // or request.getUsername()
+        user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole(request.getRole());
 
