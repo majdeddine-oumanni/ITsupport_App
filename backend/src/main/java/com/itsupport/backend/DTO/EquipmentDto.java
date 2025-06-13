@@ -6,6 +6,8 @@ public class EquipmentDto {
     private Long eq_id;
     private String name;
     private String type;
+    private String status;
+    private LocalDate purchase_date;
 
     public Long getEq_id() {
         return eq_id;
@@ -47,6 +49,4 @@ public class EquipmentDto {
         this.purchase_date = purchase_date;
     }
 
-    private String status;
-    private LocalDate purchase_date;
 }
