@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/equipment")
 public class EquipmentController {
 
     private final EquipmentService equipmentService;
@@ -32,7 +32,7 @@ public class EquipmentController {
         return equipmentService.updateEquipment(equipmentDto);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteEquipment(@PathVariable Long id) {
         equipmentService.deleteEquipment(id);
     }
