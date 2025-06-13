@@ -16,6 +16,8 @@ public class Equipment {
     private Long eq_id;
     private String name;
     private String type;
+    private String status;
+    private LocalDate purchase_date;
 
     public Long getEq_id() {
         return eq_id;
@@ -72,9 +74,6 @@ public class Equipment {
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
-
-    private String status;
-    private LocalDate purchase_date;
 
     @OneToMany(mappedBy = "equipment")
     List<BreakDown> breakDownList;
