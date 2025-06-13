@@ -14,6 +14,17 @@ public class SupportTicket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long ticket_id ;
+    private  String title;
+    private  String status;
+
+    @Enumerated(EnumType.STRING)
+    private Priority priority;
+
+    @OneToOne(mappedBy = "ticket")
+    private BreakDown breakDownList;
+
+    @ManyToOne
+    private User user;
 
     public Long getTicket_id() {
         return ticket_id;
@@ -63,15 +74,4 @@ public class SupportTicket {
         this.user = user;
     }
 
-    private  String title;
-    private  String status;
-
-    @Enumerated(EnumType.STRING)
-    private Priority priority;
-
-    @OneToOne(mappedBy = "ticket")
-    private BreakDown breakDownList;
-
-    @ManyToOne
-    private User user;
 }
