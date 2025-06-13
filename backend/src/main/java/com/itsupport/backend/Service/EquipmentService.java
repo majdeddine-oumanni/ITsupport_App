@@ -25,7 +25,7 @@ public class EquipmentService {
         return mapper.toDTO(savedEquipment);
     }
 
-    public List<EquipmentDto> getAllEquipment() {
+    public List<EquipmentDto> findAllEquipment() {
         List<Equipment> equipments = repository.findAll();
         return mapper.toDTOs(equipments);
     }

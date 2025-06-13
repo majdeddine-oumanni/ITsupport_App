@@ -27,7 +27,7 @@ public class SecurityConfiguration {
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/api/v1/auth/**").permitAll()
-
+                .requestMatchers("/equipment/**").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
