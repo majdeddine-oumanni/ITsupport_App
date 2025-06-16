@@ -1,11 +1,16 @@
 package com.itsupport.backend.DTO;
 
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+@AllArgsConstructor
+@NoArgsConstructor
 public class EquipmentDto {
     private Long eq_id;
     private String name;
     private String type;
+
     private String status;
     private LocalDate purchase_date;
 

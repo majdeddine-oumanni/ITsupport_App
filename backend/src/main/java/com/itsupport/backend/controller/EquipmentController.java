@@ -21,7 +21,7 @@ public class EquipmentController {
     }
 
     @PostMapping("/add")
-    public EquipmentDto save(EquipmentDto dto){
+    public EquipmentDto save(@RequestBody EquipmentDto dto){
         return service.saveEquipment(dto);
     }
 

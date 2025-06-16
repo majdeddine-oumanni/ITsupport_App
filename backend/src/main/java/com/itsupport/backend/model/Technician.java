@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Technician extends User {
 
 }

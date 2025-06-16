@@ -16,6 +16,8 @@ public class Equipment {
     private Long eq_id;
     private String name;
     private String type;
+
+
     private String status;
     private LocalDate purchase_date;
 
